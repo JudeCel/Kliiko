@@ -19,6 +19,7 @@ var gulp = require('gulp'),
 	newer = require('gulp-newer'),
 	templateCache = require('gulp-angular-templatecache'),
 	imagemin = require('gulp-imagemin'),
+	concat = require('gulp-concat'),
 	useref = require('gulp-useref'),
 	minifyHtml = require('gulp-minify-html'),
 	port = process.env.PORT || config.defaultPort;
@@ -80,7 +81,9 @@ gulp.task('bootstrap', function () {
 	return gulp
 		.src(config.bootstrap)
 		.pipe(plumber())
+
 		.pipe(sass())
+
 
 		//   .on('error', errorLoger)
 		.pipe(autoprefixer({browsers: ['last 2 version', '> 5%']}))
@@ -92,11 +95,13 @@ gulp.task('sass', function () {
 		.src(config.sass)
 		.pipe(plumber())
 		.pipe(sass())
-
 		//   .on('error', errorLoger)
 		.pipe(autoprefixer({browsers: ['last 2 version', '> 5%']}))
-		.pipe(gulp.dest(config.css))
+		.pipe(gulp.dest(config.css));
 });
+
+	gulp.watch(config.clientApp, ['sass']);
+
 gulp.task('images', function(){
 	log('Copying and compressing the images');
 	return gulp
@@ -184,7 +189,7 @@ function startBrowserSync() {
 	var options = {
 		proxy: 'localhost:' + port,
 		port: 3000,
-		files: [config.migrations, config.config, config.repositories, config.models, config.routes, config.views, '!' + config.sass
+		files: [config.migrations, config.config, config.clientApp, config.repositories, config.models, config.routes, config.views, '!' + config.sass
 		],
 		ghostNode: {
 			clicks: true,

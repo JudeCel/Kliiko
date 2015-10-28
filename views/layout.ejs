@@ -6,13 +6,6 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"
-          integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ=="
-          crossorigin="anonymous">
-
-    <!-- Optional theme -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css"
-          integrity="sha384-aUGj/X2zp5rLCbBxumKTCw2Z50WgIr1vs/PFN4praOTvYXWlVyh2UtNUU0KAUhAX" crossorigin="anonymous">
 
     <!--build:css css/lib.css-->
     <!--bower:css-->
@@ -20,13 +13,25 @@
     <link rel="stylesheet" href="../bower_components/toastr/toastr.css" />
     <!-- endbower-->
     <!--endbuild-->
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="/css/bootstrap-social.css">
+    <link rel="stylesheet" href="/public/css/bootstrap-social.css">
+    <link rel="stylesheet" href="/css/awesome-bootstrap-checkbox.css">
+    <link rel="stylesheet" href="/public/css/awesome-bootstrap-checkbox.css">
+    <link rel="stylesheet" href="/css/bootstrap.css">
+    <link rel="stylesheet" href="/public/css/bootstrap.css">
+
+    <link rel="stylesheet" href="/css/bootstrap-theme.css">
+    <link rel="stylesheet" href="/public/css/bootstrap-theme
+.css">
+    <link rel="stylesheet" href="/css/font-awesome.css">
+    <link rel="stylesheet" href="/public/css/font-awesome.css">
 
     <!--build:css css/app.css-->
     <!-- inject:css-->
 
-    <link rel="stylesheet" href="/public/css/bootstrap/bootstrap.css">
-    <link rel="stylesheet" href="/public/css/fonts.css">
-
+    <link rel="stylesheet" href="/public/css/main.css">
+    <link rel="stylesheet" href="css/main.css">
     <!-- endinject-->
     <!--endbuild-->
 
@@ -42,40 +47,130 @@
 </head>
 <body>
 
-<% if(user) { %>
-You are logged in as <%= user.displayName %>
-<a href="/logout" class="btn btn-danger"><span class="glyphicon glyphicon-log-out"></span> Log out</a>
-<% } else { %>
-<a href="/login" class="btn btn-danger"><span class="glyphicon glyphicon-log-in"></span> Log in</a>
-<a href="/auth/facebook"><span class="glyphicon glyphicon-icon-facebook"></span> Login with Facebook</a>
-<% } %>
+
+<nav class="navbar ">
+    <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+
+            <a class="navbar-brand " href="#page-top"><img class="img-responsive" src="icons/IF_Logo_home.png"></a>
+        </div>
 
 
-<!-- Latest compiled and minified JavaScript -->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"
-        integrity="sha512-K1qjQ+NcF2TYO/eI3M6v8EiNYZfA95pQumfvcVrTHtwQVDG+aHRqLi/ETn2uB+1JqwYqVG3LIvdm9lj6imS/pQ=="
-        crossorigin="anonymous"></script>
+        <ul class="nav navbar-nav navbar-right">
 
 
-<!--build:js js/lib.js-->
+            <li>
+                <a class="btn blue" href="#team">Tour Video<i class="fa fa-caret-right fa-lg"></i></a>
+            </li>
+            <li>
+                <a class="btn" href="#team">Help<i class="fa fa-question fa-lg"></i></a>
+            </li>
+        </ul>
+    </div>
 
-<!-- bower:js -->
-<script src="../bower_components/jquery/dist/jquery.js"></script>
-<script src="../bower_components/angular/angular.js"></script>
-<script src="../bower_components/angular-sanitize/angular-sanitize.js"></script>
-<script src="../bower_components/bootstrap/dist/js/bootstrap.js"></script>
-<script src="../bower_components/extras.angular.plus/ngplus-overlay.js"></script>
-<script src="../bower_components/moment/moment.js"></script>
-<script src="../bower_components/angular-ui-router/release/angular-ui-router.js"></script>
-<script src="../bower_components/toastr/toastr.js"></script>
-<script src="../bower_components/angular-animate/angular-animate.js"></script>
-<script src="../bower_components/angular-resource/angular-resource.js"></script>
-<script src="../bower_components/bootstrap-sass/assets/javascripts/bootstrap.js"></script>
-<!-- endbower -->
-<!--endbuild-->
+
+</nav>
+
+<main class="main-first-page">
+
+    <div class="container">
+        <h2 id="welcome">Welcome!</h2>
+        <ul class="nav nav-tabs">
+            <li class="active"><a data-toggle="tab" href="#home">LOG IN</a></li>
+            <li><a data-toggle="tab" href="#menu1">SIGN UP</a></li>
+
+        </ul>
+
+        <div class="tab-content">
+            <div id="home" class="tab-pane fade in active">
+                <h2>Log in to your account</h2>
+
+                <form>
+                    <div class="form-group">
+                        <label for="email">E-mail</label>
+                        <input type="email" class="form-control center-block" id="email" placeholder="Email">
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" class="form-control center-block" id="password"
+                               placeholder="Password">
+                    </div>
+
+                    <div class="form-group center-block">
+                        <div class="check center-block">
+                            <input type='checkbox' name='thing' value='valuable' id="thing"/><label for="thing">
+                                <div id="remember">Remember</div>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="form-group center-block">
+                        <div class="check center-block">
+                        <button type="button" class="btn login">Login</button>
+  </div>
+                        </div>
+                    <a id="forgot-password">Forgot your password?</a>
+
+                    <h2 id="or">OR</h2>
+
+                    <div class="form-group center-block">
+                        <div class="check center-block">
+                    <a class="btn btn-block btn-social btn-facebook">
+                        <i class="fa fa-facebook"></i> Log in with Facebook
+                    </a>
+                    </div>
+                        </div>
+
+                    <div class="form-group center-block">
+                        <div class="check center-block">
+                            <a class="btn btn-block btn-social btn-google">
+                                <i class="fa fa-google"></i> Log in with Gmail
+                            </a>
+                        </div>
+                    </div>
+
+                </form>
+            </div>
+
+        </div>
+    </div>
+
+
+</main>
+
+
+<!--<% if(user) { %>-->
+<!--You are logged in as <%= user.displayName %>-->
+<!--<a href="/logout" class="btn btn-danger"><span class="glyphicon glyphicon-log-out"></span> Log out</a>-->
+<!--<% } else { %>-->
+<!--<a href="/login" class="btn btn-danger"><span class="glyphicon glyphicon-log-in"></span> Log in</a>-->
+<!--<a href="/auth/facebook"><span class="glyphicon glyphicon-icon-facebook"></span> Login with Facebook</a>-->
+<!--<% } %>-->
+<script src="/public/js/ui-bootstrap-tpls-0.14.3.min.js"></script>
+
+<script src="/js/angular.min.js"></script>
+<script src="/js/controllers/login.js"></script>
+<script src="/public/js/controllers/login.js"></script>
+<script src="/public/js/angular.min.js"></script>
+<script src="/js/ui-bootstrap-tpls-0.14.3.min.js"></script>
+<script src="/js/jquery-2.1.4.min.js"></script>
+<script src="/js/bootstrap.js"></script>
+<script src="/public/js/bootstrap.js"></script>
+
 
 <!--build:js js/app.js-->
 <!--inject:js-->
+
+<script src="/public/js/angular.min.js"></script>
+
+<script src="/public/js/bootstrap.js"></script>
+
+<script src="/public/js/jquery-2.1.4.min.js"></script>
+
+<script src="/public/js/ui-bootstrap-tpls-0.14.3.min.js"></script>
+
+<script src="/public/js/controllers/login.js"></script>
 
 <!--endinject-->
 

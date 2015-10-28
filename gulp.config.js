@@ -4,6 +4,7 @@ module.exports = function () {
     var temp = './.tmp/';
     var server = './bin/';
     var views = './views/';
+
     var config = {
 
         config: 'config/**/*.*',
@@ -20,6 +21,7 @@ module.exports = function () {
         images: client + 'images/**/*.*',
         htmlTemplates: clientApp + '**/*.html',
         index: views + 'layout.ejs' ,
+        clientApp: clientApp + 'scss/**/*.scss',
         layout: views,
         js: [
             server + '**/*.*/',
@@ -27,7 +29,7 @@ module.exports = function () {
             clientApp + '**/*.js',
             '!' + clientApp + '**/*.spec.js'
         ],
-        sass: clientApp + 'scss/*.scss',
+        sass: clientApp + 'scss/main.scss',
         bootstrap: clientApp + 'scss/**/bootstrap.scss',
         server: server,
        // temp: clientApp + './css/*.css',
