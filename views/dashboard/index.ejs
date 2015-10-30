@@ -1,16 +1,12 @@
-<!-- Welcome You are logged in as <%= user.accountName %>
-<a href="/logout" class="btn btn-danger"><span class="glyphicon glyphicon-log-out"></span> Log out</a> -->
 <% include ../layout %>
 <div class="container">
   <div class="row">
-
     <nav class="navbar">
       <div class="container">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
           <a class="navbar-brand " href="#page-top"><img class="img-responsive" src="icons/IF_Logo_home.png"></a>
         </div>
-
         <ul class="nav navbar-nav navbar-right">
           <li>
              <a class="btn blue" href="#team">Tour Video<i class="fa fa-caret-right fa-lg"></i></a>
@@ -20,11 +16,8 @@
           </li>
         </ul>
       </div>
-
     </nav>
-
     <main class="main-first-page">
-
       <div class="container">
         <h1 id="welcome">Welcome!</h1>
         <ul class="nav nav-tabs">
@@ -33,15 +26,13 @@
           <li class="active"><a data-toggle="tab" href="#resources">Resources</a></li>
         </ul>
         <div class="tab-content">
-            
           <div id="account-profile" class="tab-pane fade">
-
+            <!-- TODO -->
           </div>
 
           <div id="chat-sessions" class="tab-pane fade">
-
+            <!-- TODO -->
           </div>
-          
           <div id="resources" class="tab-pane fade in active">
             <div class="btn-line-group">  
               <ul>
@@ -73,13 +64,11 @@
                 Create new theme
               </h3>
               <form accept-charset="UTF-8" role="form" id="new-room" method="post">
-                
                 <fieldset>
                   <div class="form-group input-group centred">
                     <input class="form-control new-group-field" placeholder="Name..." name="name" type="text" required="true" autofocus="true">
                   </div>
                 </fieldset>
-                
                 <div class="small-btn-group">  
                   <ul>
                     <li>
@@ -94,19 +83,26 @@
                   </ul>
                 </div>
 
+                <fieldset>
+                  <div class="form-group input-group">
+                    <input class="form-control" placeholder="#DEDEDE" name="" type="text" required="true" autofocus="true"></br>
+                    <input class="form-control" placeholder="#DEDEDE" name="" type="text" required="true" autofocus="true"></br>
+                    <input class="form-control" placeholder="#DEDEDE" name="" type="text" required="true" autofocus="true"></br>
+                    <input class="form-control" placeholder="#DEDEDE" name="" type="text" required="true" autofocus="true"></br>
+                    <input class="form-control" placeholder="#DEDEDE" name="" type="text" required="true" autofocus="true"></br>
+                    <input class="form-control" placeholder="#DEDEDE" name="" type="text" required="true" autofocus="true"></br>
+                    <input class="form-control" placeholder="#DEDEDE" name="" type="text" required="true" autofocus="true"></br>
+                  </div>
+                  <div class="form-group input-group">  
+                    <input class="form-control" placeholder="" name="" type="text" required="true" autofocus="true"></br>
+                  </div>
+                </fieldset>
+
               </form>
-            </div>
-              
+            </div>              
           </div>
-
-
         </div>
-
-
       </div>
-
-
     </main>
-
   </div>
 </div>
