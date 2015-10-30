@@ -281,3 +281,118 @@ html, body {
 @font-face {
   font-family: glyphicons-halflings-regular;
   src: url(/fonts/bootstrap/glyphicons-halflings-regular.woff2); }
+
+
+
+/*   LAURIS   */
+
+.btn-line-group {
+  float: none;
+  display: inline-block;
+  *display: inline;
+  width: 100%;
+}
+
+.btn-line-group > ul > li{
+  width: 190px;
+  display: inline-block;
+  margin-right: 15px; 
+}
+
+.btn-line-group > ul {
+  list-style-type: none;
+  padding: 0;
+  margin-bottom: 0px;
+  margin-top: 25px;
+}
+
+.btn-line-group li > a {
+  width: 190px;
+  height: 55px;
+  border-radius: 8px;  
+  background-color: #EC7A23;
+  color: #FFF;
+  font-size: 16px;
+  text-align: center;
+  line-height: 42px;
+  display: inline-block;
+  margin-bottom: 40px;
+}
+
+.btn-line-group li > a:hover, .btn-line-group li > a.active{
+  background-color: #5F493E;
+  text-decoration: none;
+  color: #FFF;
+}
+
+.heading-container > a.white{
+  font-size: 16px;
+  width: 97px;
+  height: 40px;
+  border: 1px solid #EC7A23;
+  border-radius: 8px;
+  line-height: 27px;
+  color: #EE7B22;
+  margin-top: -16px;
+}
+
+.back-icon{
+  background: url("/icons/ic_back.png") no-repeat;
+  float: left;
+  height: 32px;
+  width: 32px;
+  margin-top: 10px;
+}
+
+.heading-container > a.white:hover{
+  background-color: #5F493E;
+  color: #FFF;
+  border: 1px solid #5F493E;
+}
+
+.heading-container > h1{
+  width: 940px;
+  display: inline-block;
+  margin: 0;
+}
+
+.wide{
+  width: 405px;
+  height: 40px;
+}
+
+.new-group-field{
+  width: 405px !important;
+  border-radius: 8px !important;
+  height: 40px;
+  text-align: center;
+}
+
+.centred{
+  margin: 0 auto;
+}
+
+.small-btn-group > ul{
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.small-btn-group > ul > li{
+  max-width: 163px;
+  display: inline-block;
+}
+
+.small-btn-group > ul > li > a{
+  border: 1px solid #EC7A23;
+  border-radius: 8px;
+  color: #EE7B22;
+}
+
+.small-btn-group > ul > li > a:hover{
+  background-color: #5F493E;
+  color: #FFF;
+  border: 1px solid #5F493E;
+}
+
+/*   END   */

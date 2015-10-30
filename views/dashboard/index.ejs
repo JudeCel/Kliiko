@@ -1,2 +1,112 @@
-Welcome You are logged in as <%= user.accountName %>
-<a href="/logout" class="btn btn-danger"><span class="glyphicon glyphicon-log-out"></span> Log out</a>
+<!-- Welcome You are logged in as <%= user.accountName %>
+<a href="/logout" class="btn btn-danger"><span class="glyphicon glyphicon-log-out"></span> Log out</a> -->
+<% include ../layout %>
+<div class="container">
+  <div class="row">
+
+    <nav class="navbar">
+      <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <a class="navbar-brand " href="#page-top"><img class="img-responsive" src="icons/IF_Logo_home.png"></a>
+        </div>
+
+        <ul class="nav navbar-nav navbar-right">
+          <li>
+             <a class="btn blue" href="#team">Tour Video<i class="fa fa-caret-right fa-lg"></i></a>
+          </li>
+          <li>
+            <a class="btn" href="#team">Help<i class="fa fa-question fa-lg"></i></a>
+          </li>
+        </ul>
+      </div>
+
+    </nav>
+
+    <main class="main-first-page">
+
+      <div class="container">
+        <h1 id="welcome">Welcome!</h1>
+        <ul class="nav nav-tabs">
+          <li><a data-toggle="tab" href="#account-profile">Account Profile</a></li>
+          <li><a data-toggle="tab" href="#chat-sessions">Chat Sessions</a></li>
+          <li class="active"><a data-toggle="tab" href="#resources">Resources</a></li>
+        </ul>
+        <div class="tab-content">
+            
+          <div id="account-profile" class="tab-pane fade">
+
+          </div>
+
+          <div id="chat-sessions" class="tab-pane fade">
+
+          </div>
+          
+          <div id="resources" class="tab-pane fade in active">
+            <div class="btn-line-group">  
+              <ul>
+                <li>
+                  <a class="btn" href="#gallery">Gallery</a>
+                </li>
+                <li>
+                  <a class="btn" href="#contacts-list">Contacts list</i></a>
+                </li>
+                <li>
+                  <a class="btn" href="#topics">Topics</a>
+                </li>
+                <li>
+                  <a class="btn" href="#email-templates">Email templates</a>
+                </li>
+                <li>
+                  <a class="btn active" href="#brand-colours">Brand colours</a>
+                </li>
+              </ul>
+            </div>
+            <div class="heading-container">
+              <a class="btn white back-icon" href="#back">
+                Back
+              </a>
+              <h1>
+                Brand colours gallery
+              </h1>
+              <h3>
+                Create new theme
+              </h3>
+              <form accept-charset="UTF-8" role="form" id="new-room" method="post">
+                
+                <fieldset>
+                  <div class="form-group input-group centred">
+                    <input class="form-control new-group-field" placeholder="Name..." name="name" type="text" required="true" autofocus="true">
+                  </div>
+                </fieldset>
+                
+                <div class="small-btn-group">  
+                  <ul>
+                    <li>
+                      <a class="btn" href="#">Chat colours</a>
+                    </li>
+                    <li>
+                      <a class="btn" href="#">Whiteboard colours</i></a>
+                    </li>
+                    <li>
+                      <a class="btn" href="#">Upload lightbox colours</a>
+                    </li>
+                  </ul>
+                </div>
+
+              </form>
+            </div>
+              
+          </div>
+
+
+        </div>
+
+
+      </div>
+
+
+    </main>
+
+  </div>
+</div>
