@@ -19,10 +19,17 @@ router.use(function (req, res, next) {
 });
 
 /* GET home page. */
-router.get('/', function(req, res, next) {
-  res.render('login', { title: 'Login', error: ""});
-});
+//router.get('/', function(req, res, next) {
+//  res.render('login', { title: 'Login',user: req.user, error: ""});
+//});
 
+//router.get('/', function(req, res, next) {
+//  res.render('login', { title: 'Login', user: req.user, error: ""});
+//});
+
+router.get('/', function(req, res, next) {
+  res.render('dashboard/dashboard', { title: 'Dashboard', user: req.user, error: ""});
+});
 router.get('/registration', function(req, res, next) {
   res.render('registration', users_repo.prepareParams(req));
 });
@@ -54,7 +61,7 @@ router.post('/login', function(req, res, next) {
           res.render('login', { title: 'Login', error: "Wrong email or password"})
         }else{
           req.login(result, function(err) {
-            res.redirect(subdomains.url(req, result.accountName, '/dashboard'))
+            res.redirect(subdomains.url(req, result.accountName, '/landing'))
           });
         };
       });

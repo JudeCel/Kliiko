@@ -4,7 +4,7 @@ var router = express.Router();
 var subdomains = require('../lib/subdomains.js');
 
 function views_path(action) {
-let views_name_space = "dashboard/"
+let views_name_space = "dashboard/";
   return views_name_space + action
 }
 

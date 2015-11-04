@@ -17,8 +17,44 @@
   margin-right: auto;
   width: 300px; }
 
+.btn-buy-chat {
+  width: 100%;
+  min-width: 120px;
+  height: 40px;
+  border-radius: 8px;
+  border: 0px;
+  color: white;
+  background-color: #5f493e;
+  margin-left: 10px;
+  margin-top: 15px; }
+
+#btn-review-order {
+  background-color: #ec7a23;
+  color: white; }
+
+.btn-details-managers-etc {
+  width: 100%;
+  min-width: 120px;
+  height: 40px;
+  border-radius: 8px;
+  border: 0px;
+  color: white;
+  background-color: #ec7a23;
+  margin-left: 10px;
+  margin-top: 5px; }
+
 .fa-lg {
   margin-left: 10px; }
+
+#ic_tab_profile_active {
+  width: 30px;
+  height: 25px;
+  margin-left: 10px; }
+
+#paypal-logo {
+  width: auto;
+  height: auto;
+  margin-top: -5px; }
 
 .nav {
   margin-top: 30px; }
@@ -185,10 +221,117 @@ input[class=checkbox-signup]:checked + label {
   padding-right: 40px;
   font-size: 12px;
   font-weight: bold;
-  margin-left: -5px; }
+  margin-right: 10px; }
 
 .nav-tabs > li > a:hover {
   background-color: #389043; }
+
+#nav-tabs-dashboard {
+  border: 0px; }
+
+#nav-tabs-dashboard {
+  border: 0px; }
+
+#nav-tabs-dashboard > li {
+  margin-right: 10px; }
+
+#nav-tabs-dashboard > li.active > a, .nav-tabs > li.active > a:hover {
+  border: 0px solid #389043;
+  border-bottom: 0px solid #389043;
+  background-color: white;
+  color: #389043;
+  padding-top: 6px;
+  font-size: 13px;
+  font-weight: bold;
+  margin-bottom: -10px;
+  padding-bottom: 2px;
+  font-weight: bold;
+  width: 100%;
+  line-height: 20px;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px; }
+
+#nav-tabs-dashboard > li > a {
+  background-color: #389043;
+  color: white; }
+
+#nav-tabs-dashboard > li > a {
+  padding-top: 4px;
+  font-size: 13px;
+  font-weight: bold;
+  margin-right: 0px;
+  padding-bottom: 0px;
+  padding-left: 15px;
+  padding-right: 15px; }
+
+.tab-content-payment {
+  border-left: 2px solid #eeeceb;
+  border-right: 2px solid #eeeceb;
+  border-bottom: 2px solid #eeeceb;
+  border-top: 0px solid #eeeceb;
+  height: auto;
+  margin-bottom: 20px;
+  border-bottom-right-radius: 8px;
+  border-bottom-left-radius: 8px; }
+
+#nav-tabs-payments {
+  width: 100%;
+  border-left: 2px solid #eeeceb;
+  border-right: 2px solid #eeeceb;
+  border-top: 2px solid #eeeceb;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px; }
+
+#nav-tabs-payments > li.active > a, .nav-tabs > li.active > a:hover {
+  margin: 0;
+  background-color: white;
+  color: #9d928a;
+  border-radius: 0px;
+  font-size: 14px;
+  font-weight: bold;
+  width: 100%;
+  line-height: 40px;
+  border-bottom: 0px;
+  border-top-left-radius: 8px;
+  padding-right: 0px;
+  padding-left: 0px;
+  float: left; }
+
+#nav-tabs-payments > li.active {
+  border-radius: 0px;
+  width: 50%;
+  margin-left: 0;
+  margin-right: 0;
+  border-bottom: 0px;
+  padding-right: 0px;
+  padding-left: 0px; }
+
+#nav-tabs-payments > li {
+  color: #9d928a;
+  border-radius: 0px;
+  width: 50%;
+  margin-left: 0;
+  margin-right: 0;
+  border-bottom: 0px;
+  padding-right: 0px;
+  padding-left: 0px;
+  float: left; }
+
+#nav-tabs-payments > li > a {
+  margin: 0;
+  font-size: 14px;
+  font-weight: bold;
+  width: 100%;
+  line-height: 40px;
+  background-color: #eeeceb;
+  border-top-right-radius: 8px;
+  border-top-left-radius: 0px;
+  color: #9d928a;
+  padding-top: 15px;
+  padding-bottom: 10px;
+  border-bottom: 0px;
+  padding-right: 0px;
+  padding-left: 0px; }
 
 .login {
   color: white;
@@ -228,8 +371,8 @@ input[class=checkbox-signup]:checked + label {
 
 html, body {
   height: 100%;
-  margin: 0px;
-  padding: 0px;
+  margin: 0;
+  padding: 0;
   font-family: Source Sans Pro; }
 
 #welcome-download-pdf {
@@ -245,10 +388,72 @@ html, body {
   width: 100px;
   line-height: 20px; }
 
+.credit-card-label {
+  text-align: right;
+  float: right;
+  line-height: 33px;
+  right: 0px;
+  width: 100%; }
+
+#card-name {
+  margin-top: 8px; }
+
+.form-horizontal .control-label {
+  text-align: right; }
+
+#card-confirmation {
+  margin-top: 20px;
+  margin-bottom: 20px; }
+
 #warning-email-password {
   color: red;
   font-size: 1.4em;
   font-weight: bold; }
+
+#summary {
+  background-color: #9d928a;
+  border-radius: 8px;
+  color: white;
+  width: 100%;
+  line-height: 50px;
+  text-align: left;
+  font-size: 1.6em; }
+
+#sessions {
+  background-color: #eeeceb;
+  border-radius: 8px;
+  color: #9d928a;
+  width: 100%;
+  line-height: 50px;
+  text-align: left;
+  font-size: 1em;
+  margin-top: 10px; }
+
+#sessions-number {
+  float: left;
+  margin-left: 30px;
+  left: 100px;
+  background-color: #eeeceb;
+  color: #9d928a; }
+
+#sessions-text {
+  float: left;
+  margin-left: 20px; }
+
+#sessions-total {
+  float: right;
+  margin-right: 30px; }
+
+#order-total {
+  font-size: 1.2em;
+  line-height: 30px;
+  margin-top: 15px;
+  text-align: left;
+  margin-bottom: 15px; }
+
+#order-total-money {
+  float: right;
+  margin-right: 27px; }
 
 @font-face {
   font-family: SourceSansPro-Black;
