@@ -22,3 +22,32 @@
   margin-right: auto;
   width: 300px;
 }
+
+.btn-buy-chat{
+ width: 100%;
+  min-width: 120px;
+  height: 40px;
+  border-radius: 8px;
+  border: 0px;
+  color: white;
+  background-color: $btn-buy-chat;
+  margin-left: 10px;
+  margin-top: 15px;
+
+}
+#btn-review-order{
+  background-color: $btn-orange;
+  color: white;
+}
+
+.btn-details-managers-etc{
+  width: 100%;
+  min-width: 120px;
+  height: 40px;
+  border-radius: 8px;
+  border: 0px;
+  color: white;
+  background-color: $btn-orange;
+  margin-left: 10px;
+  margin-top: 5px;
+}

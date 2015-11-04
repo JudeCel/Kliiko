@@ -1,0 +1,57 @@
+#warning-email-password{
+  color: red;
+  font-size: 1.4em;
+  font-weight: bold;
+}
+#summary{
+  background-color: $text-summary;
+  border-radius: 8px;
+  color: white;
+  width: 100%;
+  line-height: 50px;
+  text-align: left;
+  font-size: 1.6em;
+}
+#sessions{
+  background-color: $text-sessions;
+  border-radius: 8px;
+  color: $text-summary;
+  width: 100%;
+  line-height: 50px;
+  text-align: left;
+  font-size: 1em;
+  margin-top: 10px;
+
+}
+#sessions-number{
+float: left;
+  margin-left: 30px;
+  left: 100px;
+  background-color: $text-sessions;
+
+  color: $text-summary;
+
+
+}
+
+#sessions-text{
+  float: left;
+  margin-left: 20px;
+}
+
+#sessions-total{
+  float: right;
+  margin-right: 30px;
+}
+#order-total{
+
+  font-size: 1.2em;
+  line-height: 30px;
+  margin-top: 15px;
+  text-align: left;
+  margin-bottom: 15px;
+}
+#order-total-money{
+  float:right;
+  margin-right: 27px;
+}
