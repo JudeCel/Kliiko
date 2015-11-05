@@ -25,11 +25,11 @@ app.use(cookieParser(config.get("cookieSecret")));
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use(session({
-    store: new RedisStore(config.get("redisSession")),
-    secret: config.get("sessionSecret"),
-    resave: true, saveUninitialized: false,
-    domain: config.get('server')['baseDomain'],
-    cookie: { domain: config.get('server')['baseDomain']}
+  store: new RedisStore(config.get("redisSession")),
+  secret: config.get("sessionSecret"),
+  resave: true, saveUninitialized: false,
+  domain: config.get('server')['baseDomain'],
+  cookie: { domain: config.get('server')['baseDomain']}
 }));
 
 app.use(passport.initialize());

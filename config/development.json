@@ -9,10 +9,14 @@
     "port": "6379"
   },
   "mail": {
-    "service": "gmail",
-    "auth": {
-      "user": "insiderfocus.noreply",
-      "pass": "ifs_Zupper!pwd"
+    "fromName": "Insider Focus",
+    "fromEmail":"insiderfocus.noreply@gmail.com",
+    "transport": {
+      "service": "gmail",
+      "auth": {
+        "user": "insiderfocus.noreply",
+        "pass": "ifs_Zupper!pwd"
+      }
     }
   },
   "sessionSecret": "c4be0a2cc8658004a3f2417e62281f65e995ac7c564e39e727d764a62d69e836",

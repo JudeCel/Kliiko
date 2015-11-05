@@ -2,7 +2,7 @@
 var express = require('express');
 var async = require('async');
 var router = express.Router();
-var users_repo = require('./../repositories/users');
+var usersRepo = require('./../repositories/users');
 var passport = require('passport');
 var subdomains = require('../lib/subdomains');
 var config = require('config');
@@ -22,23 +22,23 @@ router.use(function (req, res, next) {
   }
 });
 
-/* GET home page. */
+/* GET root page. */
 router.get('/', function(req, res, next) {
   res.render('login', { title: 'Login', error: ""});
 });
 
 router.get('/registration', function(req, res, next) {
-  res.render('registration', users_repo.prepareParams(req));
+  res.render('registration', usersRepo.prepareParams(req));
 });
 router.get('/landing', function(req, res, next) {
   res.render('landing', { title: 'landing', user: req.user });
 });
 router.post('/registration', function(req, res, next) {
-  users_repo.create(users_repo.prepareParams(req), function(error, result) {
+  usersRepo.create(usersRepo.prepareParams(req), function(error, result) {
     if (error) {
-      res.render('registration', users_repo.prepareParams(req, error));
+      res.render('registration', usersRepo.prepareParams(req, error));
     }else{
-      users_repo.comparePassword(result.email, result.password, function(failed, result) {
+      usersRepo.comparePassword(result.email, result.password, function(failed, result) {
         if (failed) {
           res.render('login', { title: 'Login', error: "Wrong email or password"})
         }else{
@@ -52,17 +52,16 @@ router.post('/registration', function(req, res, next) {
 });
 
 router.post('/login', function(req, res, next) {
- var post = req.body;
-      users_repo.comparePassword(post.email, post.password, function(failed, result) {
-        if (failed) {
-          res.render('login', { title: 'Login', error: "Wrong email or password"})
-        }else{
-          req.login(result, function(err) {
-            res.redirect(subdomains.url(req, result.accountName, '/dashboard'))
-          });
-        };
+  var post = req.body;
+  usersRepo.comparePassword(post.email, post.password, function(failed, result) {
+    if (failed) {
+      res.render('login', { title: 'Login', error: "Wrong email or password"})
+    }else{
+      req.login(result, function(err) {
+        res.redirect(subdomains.url(req, result.accountName, '/dashboard'))
       });
-
+    };
+  });
 });
 
 router.get('/auth/facebook', passport.authenticate('facebook', { scope : ['email'] }));
@@ -96,7 +95,7 @@ router.get('/logout', function(req, res){
 
 router.route('/forgotpassword')
   .get( function(req, res, next) {
-    res.render('forgotpassword', { title: 'Forgot your password?', email: '', error: '', success: ''});
+    res.render('forgotPassword', { title: 'Forgot your password?', email: '', error: '', success: ''});
   })
   .post( function(req, res, next) {
 
@@ -109,7 +108,7 @@ router.route('/forgotpassword')
 
       async.waterfall([
         function(next) {
-          users_repo.setResetToken(email, next);
+          usersRepo.setResetToken(email, next);
         },
         function(token, next) {
 
@@ -129,21 +128,23 @@ router.route('/forgotpassword')
           success = 'Account recovery email sent to ' + email;
         }
 
-        res.render('forgotpassword', { title: title, email: email, error: error, success: success});
+        res.render('forgotPassword', { title: title, email: email, error: error, success: success});
       });
 
     }else{
       error = 'Please fill e-mail fields';
-      res.render('forgotpassword', { title: title, email: email, error: error, success: success});
+      res.render('forgotPassword', { title: title, email: email, error: error, success: success});
     }
   });
 
 router.route('/resetpassword/:token')
   .get(function(req, res, next) {
 
-    users_repo.getUserByToken(req.params.token, function(err, user){
-
-      if (err) return  next();
+    usersRepo.getUserByToken(req.params.token, function(err, user){
+      if (err || !user) {
+        res.render('resetPassword', { title: 'Reset password', user: false, token: req.params.token, errors: {}});
+        return;
+      }
 
       var tokenCreated = new Date(user.get("resetPasswordSentAt"));
       var tokenEnd = tokenCreated.setHours(tokenCreated.getHours() + 24);
@@ -152,21 +153,25 @@ router.route('/resetpassword/:token')
         user = null;
       }
 
-      res.render('resetpassword', { title: 'Reset password', user: user, token: req.params.token, errors: {}});
+      res.render('resetPassword', { title: 'Reset password', user: user, token: req.params.token, errors: {}});
     });
 
   }).post( function(req, res, next) {
 
-    if ( !req.params.token || !req.body.password ) return  next();
+    if ( req.body.password !== req.body.repassword ) {
+      res.render('resetPassword', { title: 'Reset password', user: true, token: req.params.token, errors: {password : "Passwords not equal"}});
+      return;
+    }
 
-    users_repo.getUserByToken(req.params.token, function(err, user){
-
-      if (err) return  next();
-
-      users_repo.resetPassword(req.params.token, req.body.password, function(err, data){
+    usersRepo.getUserByToken(req.params.token, function(err, user){
+      if (err) {
+        res.render('resetPassword', { title: 'Reset password', user: false, token: req.params.token, errors: {}});
+        return;
+      }
+      usersRepo.resetPassword(req.params.token, req.body.password, function(err, data){
 
         if (err) {
-           res.render('resetpassword', { title: 'Reset password', user: user, token: req.params.token, errors: {password : err.message}});
+           res.render('resetPassword', { title: 'Reset password', user: user, token: req.params.token, errors: {password : err.message}});
         } else {
           mailers.users.sendResetPasswordSuccess({email: user.get('email')}, function(err, data){
             res.redirect("/login");
