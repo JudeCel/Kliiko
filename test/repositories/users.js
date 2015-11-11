@@ -21,7 +21,7 @@ describe('User Repo', () => {
 
     it('succsess', (done) =>  {
       let attrs = {
-        displayName: "DainisL",
+        accountName: "DainisL",
         firstName: "Dainis",
         lastName: "Lapins",
         password: "cool_password",
@@ -36,7 +36,7 @@ describe('User Repo', () => {
 
     it('Fails', function(done){
       let attrs = {
-        displayName: "DainisL",
+        accountName: "DainisL",
         firstName: "Dainis",
         password: "cool",
         email: "dainis_gmail.com"

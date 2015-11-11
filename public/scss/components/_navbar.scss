@@ -1,14 +1,37 @@
 .nav  {
   margin-top: 30px;
+ // font-family: $s-pro;
+}
+.navbar{
+  margin-bottom: 15px;
+}
+.btn .blue{
+  padding-top: 5px;
+}
+.navbar-right >li >a{
+  padding-top: 5px;
 }
 .navbar-nav > li > a{
   padding-top: 0px;
   padding-bottom: 0px;
-  line-height: 40px;
+  line-height: 30px;
   color: #FFFFFF;
-  font-size: 16px;
+  font-size: 12px;
   background-color: $m-blue;
   margin-right: 10px;
+  margin-top: 10px;
+}
+.navbar-nav > li > a:active{
+  padding-top: 0px;
+  padding-bottom: 0px;
+  line-height: 30px;
+  color: #FFFFFF;
+  font-size: 12px;
+  background-color: $m-blue;
+  margin-right: 10px;
+}
+.nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus{
+  color: $border;
 }
 .navbar-nav > li > a:hover{
   color: $w;
@@ -30,6 +53,7 @@
 }
 .tab-content{
   text-align:center;
+  color: $color_main;
 }
 
 #email{
@@ -44,6 +68,18 @@
 {
   max-width: 300px;
 
+}
+.check-google
+{
+  max-width: 300px;
+  margin-top: 20px;
+}
+.check-facebook{
+  max-width: 300px;
+  margin-bottom: 40px;
+}
+.btn-google{
+  margin-top: 20px;
 }
 .check-social
 {
@@ -94,6 +130,17 @@ input[type=checkbox]:checked + label
   color: white;
 
 }
+.nav-tabs > li > a{
+  padding-top: 7px;
+  padding-bottom: 5px;
+  padding-left: 40px;
+  padding-right: 40px;
+  font-size: 12px;
+  font-weight: bold;
+}
+.nav-tabs > li > a:hover {
+  background-color: $border;
+}
 .login {
   color: white;
   background-color: #EC7A23;
@@ -110,10 +157,11 @@ input[type=checkbox]:checked + label
   color: white;
 }
 #or{
-  margin-top: 40px;
+  margin-top: 20px;
 }
 #welcome{
   text-align: center;
+  color: white;
 }
 .nav .nav-tabs .round {
 
@@ -123,6 +171,13 @@ input[type=checkbox]:checked + label
 .main-first-page{
   background-color: $background;
   height: 100%;
+
+//  font-family: $s-pro;
 }
-html,body { height: 100%; margin: 0px; padding: 0px; }
+html,body {
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
+ // font-family: $s-pro;
+}
 

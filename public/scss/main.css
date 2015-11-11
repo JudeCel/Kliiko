@@ -1,0 +1,223 @@
+.btn .blue {
+  background-color: #58BCE3;
+  padding: 0px;
+  font-family: Source Sans Pro; }
+
+.fa-lg {
+  margin-left: 10px; }
+
+.nav {
+  margin-top: 30px; }
+
+.navbar {
+  margin-bottom: 15px; }
+
+.btn .blue {
+  padding-top: 5px; }
+
+.navbar-right > li > a {
+  padding-top: 5px; }
+
+.navbar-nav > li > a {
+  padding-top: 0px;
+  padding-bottom: 0px;
+  line-height: 30px;
+  color: #FFFFFF;
+  font-size: 12px;
+  background-color: #58BCE3;
+  margin-right: 10px;
+  margin-top: 10px; }
+
+.navbar-nav > li > a:active {
+  padding-top: 0px;
+  padding-bottom: 0px;
+  line-height: 30px;
+  color: #FFFFFF;
+  font-size: 12px;
+  background-color: #58BCE3;
+  margin-right: 10px; }
+
+.nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+  color: #389043; }
+
+.navbar-nav > li > a:hover {
+  color: #FFFFFF;
+  background-color: #58BCE3; }
+
+.navbar-brand {
+  padding-top: 5px; }
+
+.nav-tabs > li, .nav-pills > li {
+  float: none;
+  display: inline-block;
+  *display: inline;
+  /* ie7 fix */
+  zoom: 1;
+  /* hasLayout ie7 trigger */ }
+
+.nav-tabs, .nav-pills {
+  text-align: center; }
+
+.tab-content {
+  text-align: center;
+  color: #5F4A3E; }
+
+#email {
+  max-width: 300px;
+  float: none; }
+
+#password {
+  max-width: 300px;
+  float: none; }
+
+.check {
+  max-width: 300px; }
+
+.check-google {
+  max-width: 300px;
+  margin-top: 20px; }
+
+.check-facebook {
+  max-width: 300px;
+  margin-bottom: 40px; }
+
+.btn-google {
+  margin-top: 20px; }
+
+.check-social {
+  max-width: 300px;
+  height: 50px; }
+
+#remember {
+  margin-left: 40px;
+  line-height: 30px; }
+
+input[type=checkbox] {
+  display: none; }
+
+input[type=checkbox] + label {
+  background: url("/icons/checkbox_off.png") no-repeat;
+  float: left;
+  height: 32px;
+  width: 32px; }
+
+input[type=checkbox]:checked + label {
+  background: url("/icons/checkbox_on.png") no-repeat;
+  height: 32px;
+  width: 32px; }
+
+.tab-content {
+  padding-top: 10px;
+  border: 4px solid #389043;
+  border-radius: 20px;
+  background-color: white; }
+
+.nav-tabs {
+  border: 0px; }
+
+.nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+  border: 0px solid #389043;
+  border-bottom: 0px solid #389043; }
+
+.nav-tabs > li > a {
+  background-color: #389043;
+  color: white; }
+
+.nav-tabs > li > a {
+  padding-top: 7px;
+  padding-bottom: 5px;
+  padding-left: 40px;
+  padding-right: 40px;
+  font-size: 12px;
+  font-weight: bold; }
+
+.nav-tabs > li > a:hover {
+  background-color: #389043; }
+
+.login {
+  color: white;
+  background-color: #EC7A23;
+  width: 300px;
+  margin-top: 10px;
+  line-height: 20px; }
+
+#forgot-password {
+  text-align: center;
+  text-decoration: underline; }
+
+.login:hover {
+  color: white; }
+
+#or {
+  margin-top: 20px; }
+
+#welcome {
+  text-align: center;
+  color: white; }
+
+.nav .nav-tabs .round {
+  border: 1px solid;
+  background-color: green; }
+
+.main-first-page {
+  background-color: #6ea74d;
+  height: 100%; }
+
+html, body {
+  height: 100%;
+  margin: 0px;
+  padding: 0px; }
+
+@font-face {
+  font-family: SourceSansPro-Black;
+  src: url(/fonts/SourceSansPro-Black.otf); }
+@font-face {
+  font-family: SourceSansPro-BlackIt;
+  src: url(/fonts/SourceSansPro-BlackIt.otf); }
+@font-face {
+  font-family: SourceSansPro-Bold;
+  src: url(/fonts/SourceSansPro-Bold.otf); }
+@font-face {
+  font-family: SourceSansPro-BoldIt;
+  src: url(/fonts/SourceSansPro-BoldIt.otf); }
+@font-face {
+  font-family: SourceSansPro-ExtraLightIt;
+  src: url(/fonts/SourceSansPro-ExtraLight.otf); }
+@font-face {
+  font-family: SourceSansPro-ExtraLightIt;
+  src: url(/fonts/SourceSansPro-ExtraLightIt.otf); }
+@font-face {
+  font-family: SourceSansPro-It;
+  src: url(/fonts/SourceSansPro-It.otf); }
+@font-face {
+  font-family: SourceSansPro-Light;
+  src: url(/fonts/SourceSansPro-Light.otf); }
+@font-face {
+  font-family: SourceSansPro-LightIt;
+  src: url(/fonts/SourceSansPro-LightIt.otf); }
+@font-face {
+  font-family: SourceSansPro-Regular;
+  src: url(/fonts/SourceSansPro-Regular.otf); }
+@font-face {
+  font-family: SourceSansPro-Semibold;
+  src: url(/fonts/SourceSansPro-Semibold.otf); }
+@font-face {
+  font-family: SourceSansPro-SemiboldIt;
+  src: url(/fonts/SourceSansPro-SemiboldIt.otf); }
+@font-face {
+  font-family: glyphicons-halflings-regular;
+  src: url(/fonts/bootstrap/glyphicons-halflings-regular.eot); }
+@font-face {
+  font-family: glyphicons-halflings-regular;
+  src: url(/fonts/bootstrap/glyphicons-halflings-regular.svg); }
+@font-face {
+  font-family: glyphicons-halflings-regular;
+  src: url(/fonts/bootstrap/glyphicons-halflings-regular.ttf); }
+@font-face {
+  font-family: glyphicons-halflings-regular;
+  src: url(/fonts/bootstrap/glyphicons-halflings-regular.woff); }
+@font-face {
+  font-family: glyphicons-halflings-regular;
+  src: url(/fonts/bootstrap/glyphicons-halflings-regular.woff2); }
+
+/*# sourceMappingURL=main.css.map */

@@ -7,10 +7,10 @@ function create(params, callback) {
   validateForCreate(params, function(error, user) {
     if (Object.keys(error).length > 1) {
       return callback(error, user)
-    }else {
+    } else {
       createUser(params, function(error, result) {
-        if (error) {
-            return callback(error, result);
+        if (Object.keys(error).length > 1) {
+          return callback(error, result);
         }else {
           return callback(null, result);
         }
@@ -30,14 +30,19 @@ function createUser(params, callback) {
 }
 
 
+function validateVirtualAttrs(params){
+  let errors = {}
+  return errors;
+}
+
 function validateForCreate(params, callback){
   let errorsObject = validateVirtualAttrs(params)
   User.build(params).validate().done(function(errors, user) {
     if (errors) {
-      errorsObject = prepareErrors(errors, errorsObject)
-      callback(errorsObject, this)
+      errorsObject = prepareErrors(errors, {});
+      callback(errorsObject, this);
     }else{
-      callback(errorsObject, user)
+      callback(errorsObject, user);
     }
   });
 }
@@ -66,30 +71,16 @@ function prepareErrors(err, _errors_object) {
   });
   return errors
 };
-
-function validateVirtualAttrs(params){
-  let errors = {}
-  if ((params['t_and_c'] !== 'on')) {
-    errors['t_and_c'] = 'Need Accept TOS'
-  }
-  if ((params['passwordConfirmation'] !== params['password'])) {
-    errors['password'] = 'Password need to be eql with Password Confirmation'
-    errors['passwordConfirmation'] = 'Password confirmation need to be eql with Password'
-  }
-  return errors;
-}
-
 function prepareParams(req, errors) {
   return _.assign({
     user: req.user,
     title: 'Registration',
-    displayName: '',
+    accountName: '',
     firstName: '',
     lastName: '',
     email: '',
     password: '',
-    passwordConfirmation: '',
-    t_and_c: '',
+    tipsAndUpdate: 'on',
     errors: (errors || {})
   }, req.body, req.query);
 }

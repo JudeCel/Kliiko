@@ -35,6 +35,12 @@ Use [Sequelize](http://docs.sequelizejs.com/en/latest/)
 
 Use [Sequelize Migrations ](http://docs.sequelizejs.com/en/latest/docs/migrations/)
 
+
+To restart DB run command
+``` node lib/tasks/db_reset.js ```
+
+This delete all DB tables and create new tables
+
 ### Run Gulp
 
 Run commands in terminal:

@@ -20,7 +20,6 @@ router.get('/registration', function(req, res, next) {
 
 router.post('/registration', function(req, res, next) {
   users_repo.create(users_repo.prepareParams(req), function(error, result) {
-    console.log(req.body);
     if (error) {
       res.render('registration', users_repo.prepareParams(req, error));
     }else{
@@ -49,7 +48,6 @@ router.get('/login', function(req, res, next) {
 router.post('/login',
   passport.authenticate('local', { failureRedirect: '/login' }),
   function(req, res) {
-    console.log(req.session);
     res.redirect('/');
   }
 );

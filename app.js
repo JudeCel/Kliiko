@@ -66,13 +66,13 @@ passport.use(new FacebookStrategy({
 ));
 
 passport.serializeUser(function(user, done) {
-  done(null, {id: user.id, email: user.email, displayName: user.displayName});
+  done(null, {id: user.id, email: user.email, accountName: user.accountName});
 });
 
 passport.deserializeUser(function(id, done) {
-  User.find({attributes: ['email', 'displayName', 'id'], where: {id: id}}).done(function(result){
+  User.find({attributes: ['email', 'accountName', 'id'], where: {id: id}}).done(function(result){
     if (result) {
-      done(null, {id: result.id, email: result.email, displayName: result.displayName});
+      done(null, {id: result.id, email: result.email, accountName: result.accountName});
     }else{
       done("not found", null);
     };
